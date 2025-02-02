@@ -1,0 +1,148 @@
+/* src/components/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.home {
+  text-align: center;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  font-family: 'Fredoka One', cursive;
+  position: relative;
+  overflow: hidden;
+}
+
+.title {
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  animation: bounce 1.5s infinite alternate;
+}
+
+.title span {
+  color: #B2A5FF;
+  text-shadow: 5px 5px 15px rgba(255, 255, 255, 0.8);
+}
+
+.intro {
+  font-size: 2rem;
+  color: #fff;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.features-box {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.features {
+  font-size: 1.8rem;
+  color: #fff;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  margin: 10px 0;
+}
+
+.start-btn {
+  margin-top: 30px;
+  padding: 20px 40px;
+  font-size: 2rem;
+  color: #fff;
+  background: #ff4081;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+  animation: glow 1.5s infinite alternate;
+}
+
+.start-btn:hover {
+  background: #ff1e6b;
+  transform: scale(1.1);
+  box-shadow: 0px 15px 25px rgba(255, 30, 107, 0.6);
+}
+
+/* Floating bubbles animation */
+.bubbles span {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  bottom: -100px;
+  animation: bubbleUp 10s infinite ease-in-out;
+}
+
+.bubbles span:nth-child(1) {
+  left: 10%;
+  animation-duration: 6s;
+  width: 40px;
+  height: 40px;
+}
+
+.bubbles span:nth-child(2) {
+  left: 30%;
+  animation-duration: 8s;
+  width: 60px;
+  height: 60px;
+}
+
+.bubbles span:nth-child(3) {
+  left: 50%;
+  animation-duration: 7s;
+  width: 50px;
+  height: 50px;
+}
+
+.bubbles span:nth-child(4) {
+  left: 70%;
+  animation-duration: 9s;
+  width: 55px;
+  height: 55px;
+}
+
+.bubbles span:nth-child(5) {
+  left: 90%;
+  animation-duration: 10s;
+  width: 45px;
+  height: 45px;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0px 10px 20px rgba(255, 64, 129, 0.6);
+  }
+  to {
+    box-shadow: 0px 15px 30px rgba(255, 64, 129, 1);
+  }
+}
+
+@keyframes bubbleUp {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
